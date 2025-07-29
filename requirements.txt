@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 fastapi
 uvicorn
 transformers
 onnxruntime
 numpy
+=======
+fastapi
+uvicorn
+transformers
+onnxruntime
+numpy
+>>>>>>> 7e9d4cd37e37a58479d750d0c96655e1218dbb4f
