@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 services:
   - type: web
     name: onnx-embed-api
@@ -6,12 +5,3 @@ services:
     plan: free
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
-=======
-services:
-  - type: web
-    name: onnx-embed-api
-    env: python
-    plan: free
-    buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
->>>>>>> 7e9d4cd37e37a58479d750d0c96655e1218dbb4f
