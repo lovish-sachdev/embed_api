@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import onnxruntime as ort
 from transformers import AutoTokenizer
 import numpy as np
@@ -22,7 +22,7 @@ def cosine_similarity(vec1: np.ndarray, vec2: np.ndarray) -> float:
     if norm1 == 0 or norm2 == 0:
         return 0.0
     return float(np.dot(vec1, vec2) / (norm1 * norm2))
-=======
+
 import onnxruntime as ort
 from transformers import AutoTokenizer
 import numpy as np
@@ -46,4 +46,4 @@ def cosine_similarity(vec1: np.ndarray, vec2: np.ndarray) -> float:
     if norm1 == 0 or norm2 == 0:
         return 0.0
     return float(np.dot(vec1, vec2) / (norm1 * norm2))
->>>>>>> 7e9d4cd37e37a58479d750d0c96655e1218dbb4f
+
