@@ -26,28 +26,28 @@ def compare_texts(req: ScoreRequest):
 
 # from fastapi import FastAPI
 # from pydantic import BaseModel
-# from vectordb import *
+from vectordb import *
 
 # app = FastAPI()
 
-# class AddRequest(BaseModel):
-#     id: str
-#     text: str
+class AddRequest(BaseModel):
+    id: str
+    text: str
 
-# class SearchRequest(BaseModel):
-#     query: str
-#     top_k: int = 5
+class SearchRequest(BaseModel):
+    query: str
+    top_k: int = 5
 
-# @app.get("/health")
-# def health():
-#     return {"status": "ok"}
+@app.get("/health")
+def health():
+    return {"status": "ok"}
 
-# @app.post("/add")
-# def add_embedding(req: AddRequest):
-#     upload_text_embedding(req.id, req.text)
-#     return {"message": f"Uploaded embedding for ID: {req.id}"}
+@app.post("/add")
+def add_embedding(req: AddRequest):
+    upload_text_embedding(req.id, req.text)
+    return {"message": f"Uploaded embedding for ID: {req.id}"}
 
-# @app.post("/search")
-# def search_embedding(req: SearchRequest):
-#     ids = search_similar_ids(req.query, req.top_k)
-#     return {"similar_ids": ids}
+@app.post("/search")
+def search_embedding(req: SearchRequest):
+    ids = search_similar_ids(req.query, req.top_k)
+    return {"similar_ids": ids}
